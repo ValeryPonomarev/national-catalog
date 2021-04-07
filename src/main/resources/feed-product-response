@@ -1,0 +1,264 @@
+{
+   "apiversion":3,
+   "result":[
+      {
+         "good_id":!_GOOD_ID,
+         "identified_by":[
+            {
+               "value":"!_GTIN",
+               "type":"gtin",
+               "multiplier":1,
+               "level":"trade-unit"
+            }
+         ],
+         "good_name":"Чешки детские",
+         "is_kit":false,
+         "is_set":false,
+         "set_gtins":[],
+         "good_url":"https:\/\/staging.catalog.crpt.ru\/product\/4600494523007-ru-cheshki-detskie",
+         "good_img":null,
+         "good_status":"draft",
+         "good_detailed_status":["draft"],
+         "good_signed":false,
+         "good_mark_flag":false,
+         "good_turn_flag":false,
+         "flag_updated_date":"2020-08-18 14:18:03",
+         "updated_date":"2020-08-18 10:57:18",
+         "producer_inn":null,
+         "producer_name":null,
+         "categories":[
+            {
+               "cat_id":30717,
+               "cat_name":"Обувь домашняя"
+            }
+         ],
+         "brand_id":null,
+         "brand_name":null,
+         "good_rating":null,
+         "good_images":[],
+         "good_attrs":[
+            {
+               "attr_id":2478,
+               "attr_name":"Полное наименование товара",
+               "attr_value":"Чешки детские",
+               "attr_value_type":null,
+               "attr_group_id":24,
+               "attr_group_name":"Наименование товара и идентификация",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":2630,
+               "attr_name":"Страна производства",
+               "attr_value":"RU",
+               "attr_value_type":null,
+               "attr_group_id":80,
+               "attr_group_name":"Происхождение и бренды",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":2504,
+               "attr_name":"Товарный знак",
+               "attr_value":"Котофей",
+               "attr_value_type":null,
+               "attr_group_id":80,
+               "attr_group_name":"Происхождение и бренды",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":13898,
+               "attr_name":"Материал верха, %",
+               "attr_value":"ИСКУССТВЕННАЯ КОЖА",
+               "attr_value_type":"100",
+               "attr_group_id":26,
+               "attr_group_name":"Состав",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":13901,
+               "attr_name":"Материал подкладки, %",
+               "attr_value":"ТКАНЬ",
+               "attr_value_type":"100",
+               "attr_group_id":26,
+               "attr_group_name":"Состав",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":13902,
+               "attr_name":"Материал низа / подошвы, %",
+               "attr_value":"КОЖА (БАРАНЬЯ)",
+               "attr_value_type":"100",
+               "attr_group_id":26,
+               "attr_group_name":"Состав",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":13905,
+               "attr_name":"Вид обуви",
+               "attr_value":"Чешки",
+               "attr_value_type":null,
+               "attr_group_id":103,
+               "attr_group_name":"Потребительские свойства",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":13886,
+               "attr_name":"Размер в штихмассовой системе",
+               "attr_value":"26",
+               "attr_value_type":null,
+               "attr_group_id":103,
+               "attr_group_name":"Потребительские свойства",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":36,
+               "attr_name":"Цвет",
+               "attr_value":"БЕЛЫЙ",
+               "attr_value_type":null,
+               "attr_group_id":103,
+               "attr_group_name":"Потребительские свойства",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+               "attr_id":3959,
+               "attr_name":"Группа ТНВЭД",
+               "attr_value":"6402",
+               "attr_value_type":null,
+               "attr_group_id":22,
+               "attr_group_name":"Нормативно-сопроводительная документация",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+                "attr_id": 13933,
+                "attr_name": "Код ТНВЭД",
+                "attr_value": "6402000000",
+                "attr_value_type": "",
+                "attr_group_id": 22,
+                "attr_group_name": "Нормативно-сопроводительная документация",
+                "value_id": 0,
+                "gtin": null,
+                "multiplier": null,
+                "level": ""
+            },
+            {
+               "attr_id":3961,
+               "attr_name":"Группа ОКПД2",
+               "attr_value":"15.20.14",
+               "attr_value_type":null,
+               "attr_group_id":22,
+               "attr_group_name":"Нормативно-сопроводительная документация",
+               "value_id":0,
+               "gtin":null,
+               "multiplier":null,
+               "level":""
+            },
+            {
+                "attr_id": 2439,
+                "attr_name": "Ширина",
+                "attr_value": "10",
+                "attr_value_type": "см",
+                "attr_group_id": 19,
+                "attr_group_name": "Весогабаритные характеристики",
+                "value_id": 0,
+                "gtin": "4600494523007",
+                "multiplier": null,
+                "level": ""
+            },
+            {
+                "attr_id": 2438,
+                "attr_name": "Глубина",
+                "attr_value": "35",
+                "attr_value_type": "см",
+                "attr_group_id": 19,
+                "attr_group_name": "Весогабаритные характеристики",
+                "value_id": 0,
+                "gtin": "4600494523007",
+                "multiplier": null,
+                "level": ""
+            },
+            {
+                "attr_id": 2437,
+                "attr_name": "Высота",
+                "attr_value": "5",
+                "attr_value_type": "см",
+                "attr_group_id": 19,
+                "attr_group_name": "Весогабаритные характеристики",
+                "value_id": 0,
+                "gtin": "4600494523007",
+                "multiplier": null,
+                "level": ""
+            },
+            {
+               "attr_id":2440,
+               "attr_name":"Вес брутто",
+               "attr_value":"0.15",
+               "attr_value_type":"кг",
+               "attr_group_id": 19,
+               "attr_group_name":"Весогабаритные характеристики",
+               "value_id":0,
+               "gtin":"4600494523007",
+               "multiplier":null,
+               "level":""
+            },
+            {
+                "attr_id": 13756,
+                "attr_name": "Расчетный объем",
+                "attr_value": "1750",
+                "attr_value_type": "",
+                "attr_group_id": 19,
+                "attr_group_name": "Весогабаритные характеристики",
+                "value_id": 0,
+                "gtin": "4600494523007",
+                "multiplier": null,
+                "level": ""
+            },
+            {
+               "attr_id":4424,
+               "attr_name":"Наименование упаковки товара",
+               "attr_value":"Чешки детские",
+               "attr_value_type":"",
+               "attr_group_id":24,
+               "attr_group_name": "Наименование товара и идентификация",
+               "value_id":0,
+               "gtin":"4600494523007",
+               "multiplier":null,
+               "level":""
+            }
+         ],
+         "good_reviews":[],
+         "good_reviews_count":0,
+         "good_prices":[],
+         "remainder_type":null,
+         "is_tech_gtin":false
+      }
+   ]
+}
