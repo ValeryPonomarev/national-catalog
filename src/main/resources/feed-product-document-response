@@ -1,0 +1,28 @@
+{
+    "apiversion": 3,
+    "result":
+    {
+        "xmls": [
+        {
+         "goodId": !_GOOD_ID,
+         "GTIN": "04058032827467",
+         "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><good><schemaVersion>2.0</schemaVersion><name>Простыня 110*150 бязь \"Непоседа\" б/у</name><categories><category>Текстиль / Белье постельное, столовое, туалетное и кухонное</category><category>63 / 6302 Белье постельное, столовое, туалетное и кухонное</category></categories><barcodes><barcode>04058032827467</barcode></barcodes><attributes><attribute name=\"Вид товара\">ПРОСТЫНЯ</attribute><attribute name=\"Тип текстиля\">БЯЗЬ</attribute><attribute name=\"Цвет\">РАЗНОЦВЕТНЫЙ</attribute><attribute name=\"Возраст потребителя\">ДЕТСКИЙ</attribute><attribute name=\"Размер изделия\">150х110</attribute><attribute name=\"Группа ТНВЭД\">6302</attribute><attribute name=\"Полное наименование товара\"><![CDATA[Простыня 110*150 бязь \"Непоседа\" б/у]]></attribute><attribute name=\"Состав\">100% хлопок</attribute><attribute name=\"Модель / артикул производителя\"type=\"Модель\">Непоседа</attribute><attribute name=\"Товарный знак\">20653</attribute></attributes><photos/><publicationAgreement><text>Вы хотите, чтобы Ваш товар отображался на сайте Национальный-каталог.рф?</text><answer>Нет</answer></publicationAgreement></good>"
+        },
+        {
+         "goodId": !_GOOD_ID,
+         "GTIN": "04058032827467",
+         "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><good><schemaVersion>2.0</schemaVersion><name>Простыня 110*150 бязь \"Непоседа\" б/у</name><categories><category>Текстиль / Белье постельное, столовое, туалетное и кухонное</category><category>63 / 6302 Белье постельное, столовое, туалетное и кухонное</category></categories><barcodes><barcode>04058032827467</barcode></barcodes><attributes><attribute name=\"Вид товара\">ПРОСТЫНЯ</attribute><attribute name=\"Тип текстиля\">БЯЗЬ</attribute><attribute name=\"Цвет\">РАЗНОЦВЕТНЫЙ</attribute><attribute name=\"Возраст потребителя\">ДЕТСКИЙ</attribute><attribute name=\"Размер изделия\">150х110</attribute><attribute name=\"Группа ТНВЭД\">6302</attribute><attribute name=\"Полное наименование товара\"><![CDATA[Простыня 110*150 бязь \"Непоседа\" б/у]]></attribute><attribute name=\"Состав\">100% хлопок</attribute><attribute name=\"Модель / артикул производителя\"type=\"Модель\">Непоседа</attribute><attribute name=\"Товарный знак\">20653</attribute></attributes><photos/><publicationAgreement><text>Вы хотите, чтобы Ваш товар отображался на сайте Национальный-каталог.рф?</text><answer>Нет</answer></publicationAgreement></good>"
+        }],
+        "errors": [
+        {
+            "goodId": !_GOOD_ID,
+            "message": "Информация о товаре ... устарела или скомпроментирована. Попробуйте еще раз." },
+        {
+            "goodId": !_GOOD_ID,
+            "message": "Не удалось получить товар по GTIN" },
+        {
+            "goodId": !_GOOD_ID,
+            "message": "Не удалось получить товар по GTIN" }
+        ]
+    }
+}

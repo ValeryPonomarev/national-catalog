@@ -1,0 +1,12 @@
+{
+    "apiversion": 3,
+    "result":
+    {
+        "signed": [!_GOOD_ID],
+        "errors": [
+         {
+             "goodId": !_GOOD_ID,
+             "message": "Товар не готов к подписанию"
+         }]
+    }
+}

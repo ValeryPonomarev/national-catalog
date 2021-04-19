@@ -1,7 +1,5 @@
 package com.example.nationalcatalog;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -21,12 +19,18 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 @RequestMapping("/v3")
 public class RestController {
 
-    private Set<Article> articleSet = new HashSet<>();
+    private final Set<Article> articleSet = new HashSet<>();
 
     @Value("classpath:feed-product-response")
     private Resource feedProductResponseTemplate;
+    @Value("classpath:feed-id-response")
+    private Resource feedIdResponseTemplate;
     @Value("classpath:feed-status-response")
     private Resource feedStatusResponseTemplate;
+    @Value("classpath:feed-product-document-response")
+    private Resource feedProductDocumentResponseTemplate;
+    @Value("classpath:feed-sign-response")
+    private Resource feedSignResponseTemplate;
 
     @GetMapping(value = "/feed-product", produces = "application/json; charset=utf-8")
     public ResponseEntity<String> feedProduct(
@@ -45,19 +49,13 @@ public class RestController {
         return ResponseEntity.ok(response);
     }
 
-    @PostMapping("/feed")
-    public ResponseEntity<Collection<ModerationResponse>> moderation(
+    @PostMapping(value = "/feed", produces = "application/json; charset=utf-8")
+    public ResponseEntity<String> moderation(
         @RequestBody Collection<FeedRequestDto> body,
         @RequestParam(value = "authkey", defaultValue = "${national-catalog.authKey}") String authKey) {
         if (checkAuth(authKey)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
-        List<ModerationResponse> result = new ArrayList<>(body.size());
-        for (FeedRequestDto dto : body) {
-            articleSet.stream().filter(it -> it.getFeedId().equals(Integer.toString(dto.getGoodId()))).findFirst()
-                .ifPresent(it -> result.add(new ModerationResponse(Integer.parseInt(it.getFeedId()))));
-        }
-
-        return ResponseEntity.ok(result);
+        return ResponseEntity.ok(asString(feedIdResponseTemplate).replace("!_FEED_ID", Integer.toString(2136)));
     }
 
     @GetMapping("/feed-status")
@@ -65,19 +63,36 @@ public class RestController {
         @RequestParam(value = "apikey") String authKey,
         @RequestParam("feed_id") int feedId) {
         if (checkAuth(authKey)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        return ResponseEntity.ok(asString(feedProductResponseTemplate).replace("!_FEED_ID", Integer.toString(feedId)));
+        return ResponseEntity.ok(asString(feedStatusResponseTemplate).replace("!_FEED_ID", Integer.toString(feedId)));
     }
 
-    @PostMapping("/feed-product-sign-pkcs")
+    @PostMapping(value = "/feed-product-document", produces = "application/json; charset=utf-8")
+    public ResponseEntity<String> getProductDocument(
+        @RequestParam(value = "apikey") String authKey,
+        @RequestBody NcFeedProductCardRequest body) {
+        if (checkAuth(authKey)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        String template = asString(feedProductDocumentResponseTemplate);
+        for (String goodId : body.getGoodIds()) {
+            template = template.replaceFirst("!_GOOD_ID", goodId);
+        }
+        return ResponseEntity.ok(template);
+    }
+
+    @PostMapping(value = "/feed-product-sign-pkcs", produces = "application/json; charset=utf-8")
     public ResponseEntity<String> signingProduct(
         @RequestParam(value = "apikey") String authKey,
-        @RequestBody FeedRequestDto body) {
+        @RequestBody List<NcSignProductRequest> body) {
         if (checkAuth(authKey)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        return ResponseEntity.ok("ok");
+        String template = asString(feedSignResponseTemplate);
+        for (NcSignProductRequest ncSignProductRequest : body) {
+            template = template.replaceFirst("!_GOOD_ID", String.valueOf(ncSignProductRequest.getGoodId()));
+        }
+        System.out.println(template);
+        return ResponseEntity.ok(template);
     }
 
     private boolean checkAuth(@RequestParam("authkey") String authKey) {
-        return !authKey.equals("to73e6sj4gb9n259");
+        return !authKey.equals("");
     }
 
     private int randomInt(int min, int max) {
